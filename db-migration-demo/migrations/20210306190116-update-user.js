@@ -30,6 +30,7 @@ exports.up = function (db, callback) {
     });
   });
 };
+
 exports.down = function (db, callback) {
   db.addColumn('user', 'full_name', {
     type: 'string',

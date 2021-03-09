@@ -14,7 +14,6 @@ exports.setup = function(options, seedLink) {
   seed = seedLink;
 };
 
-/* Contains code to move the database forward, or up, to the next database version */
 exports.up = function(db, callback) {
   db.createTable('user', {
     id: {
@@ -38,8 +37,6 @@ exports.up = function(db, callback) {
   });
 };
 
-/* Contains code to move the database backwards, or down, to the previous database
- * version, i.e. rollback */
 exports.down = function(db, callback) {
   db.dropTable('user', callback);
 };
