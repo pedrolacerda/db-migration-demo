@@ -1,12 +1,12 @@
 # Database migration demo
 
-## Instalando `Node.js`
+## Instalando `Node.js` > 10.16
 
 - Acesse <https://nodejs.org> e baixe a útlima versão LTS do Node.js
 - Proceda com o wizard de instalação até o fim mantendo as configurações padrão
 - Verifique sua instalação executando no terminal `node -v`
 
-## Instalando `PowerShell` (apenas usuários Windows)
+## Instalando `PowerShell` (apenas usuários Windows - opcional)
 
 - Acesse <https://github.com/PowerShell/PowerShell/releases/tag/v7.1.2> e baixe a última versão (arquivo `.msi`)
   - Role a página para baixo até a sessão de `Assets`
@@ -20,7 +20,7 @@
 ## Criando a aplicação de demonstração
 
 - Crie uma pasta chamada `db-migration-demo`
-  - Você pode executar o comando `mkdir db-migration-demo`)
+  - Você pode executar o comando `mkdir db-migration-demo`
 - Abra o seu terminal a partir desta pasta
   - Caso você tenha criado a partir do terminal, acesse a pasta via `cd db-migration-demo`
 
@@ -28,9 +28,10 @@
 
 - Execute o comando `npm install -g @loopback/cli`
 
-### Criando um novo projeto (opcional)
+### Criando um novo projeto
 
 - Crie um novo projeto executando o comando `lb4 app`
+  - **Usuários Windows**: Caso não funcione via `Git BASH`, execute o comando utilizando o `cmd` tradicional
 - Preencha os campos requisitados no terminal. Ex:
 
 ```bash
@@ -56,9 +57,10 @@ Em seguida serão criados diretórios e arquivos padrão para o projeto e també
 
 ## Instalando MySQL
 
-- Baixe a última versão do [`MySQL Community Server`](https://dev.mysql.com/downloads/mysql/) acessando o link <https://dev.mysql.com/downloads/mysql/> e siga o processo de instalação padrão até o fim.
+- Baixe a última versão do [`MySQL Community Server`](https://dev.mysql.com/downloads/mysql/) acessando o link <https://dev.mysql.com/downloads/installer/> e siga o processo de instalação padrão até o fim.
+  - Baixe a versão mais completa do instalador (~400MB). 
   - Você deverá criar uma senha para o usuário `root`
-- Baixe a ultima versão do [`MySQL Workbench`](https://www.mysql.com/products/workbench/) acessando o link <https://dev.mysql.com/downloads/workbench/> e siga o processo de instalação padrão até o fim
+- Baixe a ultima versão do [`MySQL Workbench`](https://www.mysql.com/products/workbench/) acessando o link <https://dev.mysql.com/downloads/workbench/> e siga o processo de instalação padrão até o fim.
 - Verifique se o MySQL está rodando `mysqladmin` em seguida insira sua senha. Você deve receber uma confirmação ```mysqld is alive```
   - Caso o seu MySQL não esteja rodando, execute: `$ sudo service mysql start`
 
@@ -140,7 +142,7 @@ exports.down = function(db, callback) {
 Este script deve criar uma nova tabela quando nós movemos a versão do banco de dados para a frente (`up`) e deletar a tabela quando revertermos (`down`).
 
 - Execute `db-migrate up` para testar o script.
-  - Caso o script lance um erro de conexão, execute as seguintes queries
+  - 🚨 Caso o script lance um erro de conexão, execute as seguintes queries
     - `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'` - substituia `password` pela sua senha do BD
     - `flush privileges;`
 
