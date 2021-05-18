@@ -24,30 +24,30 @@
 - Abra o seu terminal a partir desta pasta
   - Caso você tenha criado a partir do terminal, acesse a pasta via `cd db-migration-demo`
 
-### Instalando `Loopback 4`
-
-- Execute o comando `npm install -g @loopback/cli`
-
 ### Criando um novo projeto
 
-- Crie um novo projeto executando o comando `lb4 app`
+- Crie um novo projeto executando o comando `npm init`
   - **Usuários Windows**: Caso não funcione via `Git BASH`, execute o comando utilizando o `cmd` tradicional
 - Preencha os campos requisitados no terminal. Ex:
 
 ```bash
-? Project name: (projects) db-migration-demo
-? Project description: (projects) A simple Payment API
-? Project root directory: (db-migration-demo) 
-? Application class name: (DbMigrationDemoApplication)
-? Select project build settings: (Press <space> to select, <a> to toggle all, <i> to invert selection) ... Press enter for default selection
-? Yarn is available. Do you prefer to use it by default? No
+package name: (db-migration-demo) 
+version: (1.0.0) 
+description: exercicio aula 03 - DB migration
+entry point: (index.js) 
+test command:
+git repository: https://github.com/<seu_usuario>/db-migration-demo
+keywords: 
+author: <seu_nome>
+
+Is this OK? (yes)
 ```
 
-Em seguida serão criados diretórios e arquivos padrão para o projeto e também executado `npm install` para configuração das dependências.
+- Crie uma aplicação `express` rápida
 
-- Acesse a pasta do projeto `cd db-migration-demo`
-- Execute `npm start`
-- Acesse <http://127.0.0.1:3000/>
+```bash
+npm install express --save
+```
 
 ## Instalando `db-migrate`
 
