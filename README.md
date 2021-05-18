@@ -51,7 +51,7 @@ npm install express --save
 
 ## Instalando `db-migrate`
 
-- Acesse o diretório `db-migration-demo` dentro do repositório de mesmo nome (`db-migration-demo/db-migration-demo`)
+- Acesse o diretório `db-migration-demo`
 - Instale o framework `db-migrate` executando `npm install -g db-migrate`
 - Nós vamos utilizar um banco de dados MySQL, portanto é necessária a instalação do pacote que fará a gestão das conexões por nós `npm install --save db-migrate-mysql`
 
